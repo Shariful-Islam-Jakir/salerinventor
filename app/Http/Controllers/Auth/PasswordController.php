@@ -9,6 +9,8 @@ class PasswordController extends Controller
 {
     public function forgetPassword(Request $request){
          $email = $request->email;
-         
+
+         $user= User::where('email','$email')->first();
+
     }
 }
